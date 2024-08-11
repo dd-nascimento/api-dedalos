@@ -1,4 +1,13 @@
-# Projeto API-REST Dedalos 1.0
+<h1 align="center"> Projeto API-REST Dedalos 1.0 </h1>
 
-## API REST Dedalos versão 1.0
 
+![Static Badge](https://img.shields.io/badge/dedalos-v1.0-brightgreen)
+
+---
+## O Projeto
+Construção de uma aplicação WEB para gestão digital de projetos.
+
+
+## O desenvolvimento
+
+### Tecnologias utilizadas
