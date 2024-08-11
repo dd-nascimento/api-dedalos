@@ -1,6 +1,5 @@
 # Projeto API-REST Dedalos 1.0
 
-
 ![Static Badge](https://img.shields.io/badge/dedalos-v1.0-brightgreen)
 
 ---
