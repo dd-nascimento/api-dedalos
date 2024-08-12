@@ -14,9 +14,19 @@ public class UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+    @Autowired
+    private EmailService emailService;
+
     public Usuario salvarUsuario (Usuario usuario){
         
-        return usuarioRepository.save(usuario);
+        usuarioRepository.save(usuario);
+
+        emailService.enviarEmailTexto(usuario.getEmail(), 
+        "Novo usuario cadastrado", 
+        "Você foi cadastrado no Dedalos!");
+        
+        return usuario;
+
     }
 
     public List<Usuario> listarUsuario(){
