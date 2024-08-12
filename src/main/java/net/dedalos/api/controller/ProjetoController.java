@@ -29,7 +29,7 @@ public class ProjetoController {
     }
 
     @GetMapping
-    public List<Projeto> listarProjetos (){
-        return projetoService.listarProjetos();
+    public ResponseEntity <List<Projeto>> listarProjetos (){
+        return ResponseEntity.ok().body(projetoService.listarProjetos());
     }
 }
