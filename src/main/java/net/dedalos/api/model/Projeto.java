@@ -13,9 +13,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.dedalos.api.constants.SituacaoProjeto;
 import net.dedalos.api.constants.StatusProjeto;
 
 @Data
@@ -29,6 +31,10 @@ public class Projeto {
     @Column (name = "ID_PROJETO")
     private Long idProjeto;
 
+    // String formato = "(/(\\d{3})(\\d{3})(\\d{3})(\\d{2})/, '$1.$2.$3-$4')";
+
+    
+    @Pattern(regexp = "^[A-Z]{3}-\\d{2}\\.\\d{4}\\.\\d{4}\\/\\d{2}\\.\\d{1}$", message = "Formato inválido. Esperado: AAAA-1234-1.23/45")
     @Column(name = "CODIGO_PROJETO", nullable = false)
     private String codigoProjeto;
 
@@ -62,6 +68,10 @@ public class Projeto {
     @Column(name = "STATUS_PROJETO", nullable = false)
     @Enumerated(EnumType.STRING)
     private StatusProjeto statusProjeto;
+
+    @Column(name = "SITUACAO_PROJETO", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private SituacaoProjeto situacaoProjeto;
 
     @ManyToOne
     @JoinColumn(name = "USUARIO_PROPONENTE")
