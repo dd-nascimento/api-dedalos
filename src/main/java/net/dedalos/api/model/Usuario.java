@@ -15,7 +15,7 @@ import lombok.Data;
 import net.dedalos.api.constants.StatusUsuario;
 
 @Data
-@Entity(name = "dd_usuarios")
+@Entity(name = "dd_usuario")
 public class Usuario {
     
     @Id
