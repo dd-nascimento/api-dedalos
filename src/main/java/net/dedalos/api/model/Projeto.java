@@ -73,6 +73,9 @@ public class Projeto {
     @Enumerated(EnumType.STRING)
     private SituacaoProjeto situacaoProjeto;
 
+    @Column(name = "DOC_PROJETO", nullable = false)
+    private String docProjeto;
+
     @ManyToOne
     @JoinColumn(name = "USUARIO_PROPONENTE")
     private Usuario proponenteUsuario;
