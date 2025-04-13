@@ -33,7 +33,8 @@ public class Usuario {
     @Column(name = "DATA_NASCIMENTO", nullable = false)
     private LocalDate dataDeNascimento;
 
-    @Column(name = "CPF", nullable = false)
+    @Column(name = "CPF", nullable = false, unique = true
+    )
     private String cpf;
 
     @Column(name = "EMAIL", nullable = false)
