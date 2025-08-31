@@ -16,7 +16,7 @@ import net.dedalos.api.model.Projeto;
 import net.dedalos.api.service.ProjetoService;
 
 @Controller
-@RequestMapping("/api/projetos")
+@RequestMapping("/projetos")
 public class ProjetoController {
     
     @Autowired
